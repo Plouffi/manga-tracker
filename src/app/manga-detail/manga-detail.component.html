@@ -1,0 +1,8 @@
+<h2 [title]="manga.title">
+  {{manga.title}}
+</h2>
+
+<div *ngFor="let tome of manga.list; index as i">
+  <span>Tome {{i+1}} </span>
+  <input type="checkbox" *ng-checked="tome === 1" />
+</div>

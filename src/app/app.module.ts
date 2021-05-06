@@ -9,7 +9,8 @@ import { TopBarComponent } from "./top-bar/top-bar.component";
 import { LibraryComponent } from "./library/library.component";
 import { MangaItemComponent } from "./manga-item/manga-item.component";
 import { FormComponent } from "./form/form.component";
-import { AddSerieService } from './add-serie.service';
+import { AddSerieService } from "./add-serie.service";
+import { MangaDetailComponent } from "./manga-detail/manga-detail.component";
 
 @NgModule({
   imports: [
@@ -18,7 +19,8 @@ import { AddSerieService } from './add-serie.service';
     ReactiveFormsModule,
     RouterModule.forRoot([
       { path: "", component: LibraryComponent },
-      { path: "add", component: FormComponent }
+      { path: "add", component: FormComponent },
+      { path: "manga/:mangaId", component: MangaDetailComponent }
     ])
   ],
   declarations: [
@@ -26,7 +28,8 @@ import { AddSerieService } from './add-serie.service';
     TopBarComponent,
     LibraryComponent,
     MangaItemComponent,
-    FormComponent
+    FormComponent,
+    MangaDetailComponent
   ],
   bootstrap: [AppComponent],
   providers: [AddSerieService]

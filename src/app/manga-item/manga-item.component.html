@@ -5,5 +5,5 @@
 <div *ngIf="expanded">
   <img src="/assets/img/1.jpg" />
   <span>Tomes: {{nbTome()}} / {{manga.list.length}}</span>
-  <button>Editer</button>
+  <button [routerLink]="['/manga', manga.id]">Editer</button>
 </div>
