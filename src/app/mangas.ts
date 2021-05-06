@@ -1,0 +1,8 @@
+export let mangas = [
+  {
+    id: 1,
+    title: "Black Torch",
+    img: "",
+    list: [0, 0, 0, 0, 0]
+  }
+];

@@ -1,0 +1,12 @@
+<h2>Bibliothèque</h2>
+
+<div>
+  <div>
+    <a [routerLink]="['/add']">
+      <button>Ajouter une série</button>
+    </a>
+  </div>
+  <div *ngFor="let manga of mangas">
+    <a [title]="manga.title"> {{manga.title}}</a>
+  </div>
+</div>
