@@ -1,0 +1,9 @@
+<span [title]="manga.title" (click)="toggle()">
+  {{manga.title}} - {{completed()}} %
+</span>
+
+<div *ngIf="expanded">
+  <img src="/assets/img/1.jpg" />
+  <span>Tomes: {{nbTome()}} / {{manga.list.length}}</span>
+  <button>Editer</button>
+</div>

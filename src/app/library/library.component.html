@@ -7,6 +7,6 @@
     </a>
   </div>
   <div *ngFor="let manga of mangas">
-    <a [title]="manga.title"> {{manga.title}}</a>
+    <app-manga-item [manga]="manga"></app-manga-item>
   </div>
 </div>

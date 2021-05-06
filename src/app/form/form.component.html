@@ -1,0 +1,22 @@
+<form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="title">
+      Titre
+    </label>
+    <input id="title" type="text" formControlName="title" />
+  </div>
+  <div>
+    <label for="nbTome">
+      Nombre de tomes
+    </label>
+    <input id="nbTome" type="number" formControlName="nbTome" />
+  </div>
+  <div>
+    <label for="img">
+      Couverture
+    </label>
+    <input id="img" type="file" (input)="handleFileInput($event.target)" />
+  </div>
+
+  <button class="button" type="submit">Ajouter</button>
+</form>

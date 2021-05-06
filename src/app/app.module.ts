@@ -7,16 +7,29 @@ import { HttpClientModule } from "@angular/common/http";
 import { AppComponent } from "./app.component";
 import { TopBarComponent } from "./top-bar/top-bar.component";
 import { LibraryComponent } from "./library/library.component";
+import { MangaItemComponent } from "./manga-item/manga-item.component";
+import { FormComponent } from "./form/form.component";
+import { AddSerieService } from './add-serie.service';
 
 @NgModule({
   imports: [
     BrowserModule,
     HttpClientModule,
     ReactiveFormsModule,
-    RouterModule.forRoot([{ path: "", component: LibraryComponent }])
+    RouterModule.forRoot([
+      { path: "", component: LibraryComponent },
+      { path: "add", component: FormComponent }
+    ])
   ],
-  declarations: [AppComponent, TopBarComponent, LibraryComponent],
-  bootstrap: [AppComponent]
+  declarations: [
+    AppComponent,
+    TopBarComponent,
+    LibraryComponent,
+    MangaItemComponent,
+    FormComponent
+  ],
+  bootstrap: [AppComponent],
+  providers: [AddSerieService]
 })
 export class AppModule {}
 
