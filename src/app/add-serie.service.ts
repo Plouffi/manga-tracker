@@ -1,7 +1,7 @@
-import { Injectable } from "@angular/core";
-import { HttpClient } from "@angular/common/http";
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
-import { mangas } from "./mangas";
+import { mangas } from './mangas';
 
 @Injectable()
 export class AddSerieService {
@@ -14,7 +14,7 @@ export class AddSerieService {
     this.mangas.push({
       id: lastID + 1,
       title: serie.title,
-      img: img.name,
+      editor: serie.editor,
       list: new Array(serie.nbTome).fill(0)
     });
     /**

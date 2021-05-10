@@ -1,9 +1,10 @@
-<span [title]="manga.title" (click)="toggle()">
-  {{manga.title}} - {{completed()}} %
+<span class="container col-xs-12"[title]="manga.title" (click)="toggle()">
+  <span class="float-left">{{manga.title}}</span>
+<span class="float-right">{{completed()}} %</span>
 </span>
 
 <div *ngIf="expanded">
-  <img src="../assets/img/1.jpg" />
+  <span>Editeur: {{manga.editor}}</span>
   <span>Tomes: {{nbTome()}} / {{manga.list.length}}</span>
   <button [routerLink]="['/manga', manga.id]">Editer</button>
 </div>
